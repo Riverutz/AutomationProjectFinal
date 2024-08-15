@@ -11,7 +11,7 @@ To use this project you will need:
 Tests are grouped in path: /AutomationProjectAugust/src/test/java/flaxTest
 ```
 ## About
-This project aims to automate the core e-commerce customer journey by testing product search, add to cart, and checkout processes. Specifically, it will validate the ability to search for a specific product (e.g., 18-inch black gaming laptop with Intel Core i9), add it to the cart, and complete the checkout process by entering correct delivery and billing information.
+This project focuses on automating the e-commerce product search process using filter options, followed by adding the selected product to the cart and completing the checkout. Specifically, it will test the functionality of filtering laptops based on specific criteria (category: gaming, display size: 18 inch, CPU: Intel Core i9, color: black), adding the chosen product to the cart, and proceeding through the checkout process, including entering and verifying delivery and billing addresses.
 
 For this Maven Project, I have used:
 - Data Driven Testing ( stored Test Data in a JSON format)
