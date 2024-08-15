@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import methods.ElementMethods;
 import methods.PageMethods;

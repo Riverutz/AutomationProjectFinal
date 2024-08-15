@@ -1,6 +1,6 @@
 package flaxTest;
 
-import Pages.*;
+import pages.*;
 import environmentPreparation.Environment;
 import objectData.BillingPageObject;
 import objectData.DeliveryPageObject;
