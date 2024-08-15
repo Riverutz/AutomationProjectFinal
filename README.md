@@ -8,7 +8,7 @@ To use this project you will need:
 3. Clone with Git Bash
 4. In Intellij click File>Open> import project to your workspace.
 
-Tests are grouped in path: /AutomationProjectFinal/src/test/java/evomag
+Tests are grouped in path: /AutomationProjectFinal/src/test/java/flaxTest
 ```
 ## About
 For this Maven Project, I have used:
