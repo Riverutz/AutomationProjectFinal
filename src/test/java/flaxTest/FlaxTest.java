@@ -12,9 +12,6 @@ public class FlaxTest extends Environment {
     @Test
     public void siteTest(){
 
-
-        //This project aims to automate the core e-commerce customer journey by testing product search, add to cart, and checkout processes. Specifically, it will validate the ability to search for a specific product (e.g., 18-inch black gaming laptop with Intel Core i9), add it to the cart, and complete the checkout process by entering correct delivery and billing information.
-        // By automating these critical steps, we will improve test efficiency, identify potential issues, and enhance the overall user experience.
         CookiesPage cookiesPage = new CookiesPage(getDriver());
         cookiesPage.acceptSiteCookies();
 
