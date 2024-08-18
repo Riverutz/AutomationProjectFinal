@@ -31,7 +31,7 @@ public class DeliveryPage extends MethodsPage {
     private WebElement clickSalveazaAddButton;
     @FindBy(xpath = "//label[@for='shipping-method-16']")
     private WebElement courier;
-    @FindBy(xpath = "//label[@for='payment-method-18']")
+    @FindBy(xpath = "//span[contains(text(),'Ramburs la livrare – achitati numerar curierului')]")
     private WebElement paymentMethod;
     @FindBy(id = "observations")
     private WebElement observations;
