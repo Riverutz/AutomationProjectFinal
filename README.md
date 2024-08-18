@@ -20,4 +20,5 @@ For this Maven Project, I have used:
 - Used Access Control (Private & Protected)
 - Used log4j2 to document each action
 - Used Java library Lombok to minimize/remove the boilerplate code
+- Added Surefire plugin
 - CI/CD pipeline
