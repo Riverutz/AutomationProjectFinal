@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import java.time.Duration;
 
 @Getter
@@ -16,9 +17,15 @@ public class Environment {
 
     @BeforeMethod
     public void prepareEnvironment() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
-        driver = new ChromeDriver(options);
+        boolean ci_cd = Boolean.parseBoolean(System.getProperty("CI_CD"));
+        if (ci_cd) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            driver = new ChromeDriver(options);
+        } else {
+            driver = new ChromeDriver();
+        }
+
         driver.get("https://www.flax.ro/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -27,7 +34,7 @@ public class Environment {
 
     @AfterMethod
     public void clearEnvironment(ITestResult result) {
-        if (!result.isSuccess()){
+        if (!result.isSuccess()) {
             LogUtil.info(result.getThrowable().getMessage());
         }
 
