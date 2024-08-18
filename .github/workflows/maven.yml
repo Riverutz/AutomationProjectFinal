@@ -17,6 +17,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run Automation Tests
-      run: mvn clean install -DCI_CD = true
+      run: mvn clean install -DCI_CD=true
 
    
