@@ -14,7 +14,7 @@ Tests are grouped in path: /AutomationProjectAugust/src/test/java/flaxTest
 This project focuses on automating the e-commerce product search process using filter options, followed by adding the selected product to the cart and completing the checkout. Specifically, it will test the functionality of filtering laptops based on specific criteria (category: gaming, display size: 18 inch, CPU: Intel Core i9, color: black), adding the chosen product to the cart, and proceeding through the checkout process, including entering and verifying delivery and billing addresses.
 
 For this Maven Project, I have used:
-- Data Driven Testing ( stored Test Data in a JSON format)
+- Data Driven Testing (stored Test Data in a JSON format)
 - Page Object Models
 - Java OOP Concepts like Inheritence & Encapsulation
 - Used Access Control (Private & Protected)
