@@ -18,14 +18,15 @@ public class Environment {
     @BeforeMethod
     public void prepareEnvironment() {
         boolean ci_cd = Boolean.parseBoolean(System.getProperty("CI_CD"));
+        ChromeOptions options = new ChromeOptions();
         if (ci_cd) {
-            ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless=new");
+            options.addArguments("--disable-search-engine-choice-screen");
             driver = new ChromeDriver(options);
         } else {
-            driver = new ChromeDriver();
+            options.addArguments("--disable-search-engine-choice-screen");
+            driver = new ChromeDriver(options);
         }
-
         driver.get("https://www.flax.ro/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -37,7 +38,6 @@ public class Environment {
         if (!result.isSuccess()) {
             LogUtil.info(result.getThrowable().getMessage());
         }
-
         driver.quit();
         LogUtil.info("The browser was closed successfully!");
     }
