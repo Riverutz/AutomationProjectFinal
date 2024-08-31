@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends MethodsPage{
+public class LoginPage extends MethodsPage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -19,24 +19,18 @@ public class LoginPage extends MethodsPage{
     private WebElement userPassword;
     @FindBy(xpath = "//a[normalize-space()='Login']")
     private WebElement clickLoginButton;
+    @FindBy(xpath = "//a[@title='Logout']")
+    private WebElement logOutButton;
 
-    public void myAccount(){
+    public void accountLogin(LoginPageObject testData) {
         elementMethods.mouseHoverElement(contulMeu);
         LogUtil.info("The user mouse hover on 'CONTUL MEU' ");
-    }
-
-    public void userEmailLogin(LoginPageObject testData){
         elementMethods.fillElement(userEmail, testData.getUserEmailValue());
         LogUtil.info("The user filled the 'EMAIL' field with the value: " + testData.getUserEmailValue());
-    }
-
-    public void userPasswordLogin(LoginPageObject testData){
         elementMethods.fillElement(userPassword, testData.getUserPasswordValue());
         LogUtil.info("The user filled the 'PASSWORD' field with the value: " + testData.getUserPasswordValue());
-    }
-
-    public void loginButton(){
         elementMethods.clickJSElement(clickLoginButton);
         LogUtil.info("The user clicked on 'LOGIN' Button");
     }
 }
+

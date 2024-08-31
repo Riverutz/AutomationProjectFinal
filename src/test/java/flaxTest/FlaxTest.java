@@ -17,10 +17,7 @@ public class FlaxTest extends Environment {
 
         LoginPageObject loginTestData = new LoginPageObject("src/test/resources/testData/LoginPageData.json");
         LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.myAccount();
-        loginPage.userEmailLogin(loginTestData);
-        loginPage.userPasswordLogin(loginTestData);
-        loginPage.loginButton();
+        loginPage.accountLogin(loginTestData);
 
         CategoryPage categoryPage = new CategoryPage(getDriver());
         categoryPage.laptopTabletaMenuSelection();
