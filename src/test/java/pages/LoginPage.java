@@ -19,8 +19,7 @@ public class LoginPage extends MethodsPage {
     private WebElement userPassword;
     @FindBy(xpath = "//a[normalize-space()='Login']")
     private WebElement clickLoginButton;
-    @FindBy(xpath = "//a[@title='Logout']")
-    private WebElement logOutButton;
+
 
     public void accountLogin(LoginPageObject testData) {
         elementMethods.mouseHoverElement(contulMeu);
@@ -33,4 +32,7 @@ public class LoginPage extends MethodsPage {
         LogUtil.info("The user clicked on 'LOGIN' Button");
     }
 }
+
+
+
 

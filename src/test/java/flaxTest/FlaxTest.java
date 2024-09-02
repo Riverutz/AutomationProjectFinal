@@ -48,5 +48,6 @@ public class FlaxTest extends Environment {
         deliveryPage.paymentMethods();
         deliveryPage.tinyObservations(deliveryTestData);
         deliveryPage.agreeWithTermsAndConditions();
+
     }
 }
