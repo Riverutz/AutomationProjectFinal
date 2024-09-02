@@ -22,8 +22,6 @@ public class LoginPage extends MethodsPage {
     private WebElement clickLoginButton;
     @FindBy(xpath = "//a[@title='Logout']")
     private WebElement logOutButton;
-    @FindBy(xpath = "//h5[text()='Eroare']")
-    private WebElement errorMessage;
 
     public void accountLogin(LoginPageObject testData) {
         elementMethods.mouseHoverElement(contulMeu);
