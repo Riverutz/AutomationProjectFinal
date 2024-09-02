@@ -1,4 +1,4 @@
-package flaxTest;
+package tests;
 
 import pages.*;
 import environmentPreparation.Environment;

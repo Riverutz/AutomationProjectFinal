@@ -8,7 +8,7 @@ To use this project you will need:
 3. Clone with Git Bash
 4. In Intellij click File>Open> import project to your workspace.
 
-Tests are grouped in path: /AutomationProjectAugust/src/test/java/flaxTest
+Tests are grouped in path: /AutomationProjectAugust/src/test/java/tests
 ```
 ## About
 This project focuses on automating the e-commerce product search process using filter options, followed by adding the selected product to the cart and completing the checkout. Specifically, it will test the functionality of filtering laptops based on specific criteria (category: gaming, display size: 18 inch, CPU: Intel Core i9, color: black), adding the chosen product to the cart, and proceeding through the checkout process, including entering and verifying delivery and billing addresses.
