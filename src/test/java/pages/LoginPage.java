@@ -42,7 +42,3 @@ public class LoginPage extends MethodsPage {
         elementMethods.clickJSElement(logOutButton);
     }
 }
-
-
-
-
