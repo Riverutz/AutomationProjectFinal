@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class LoginPageObject extends GeneralObject{
+public class LoginPageObject extends GeneralObject {
     private String userEmailValue;
     private String userPasswordValue;
 
@@ -13,3 +13,4 @@ public class LoginPageObject extends GeneralObject{
         fromJsonToObject(filePath);
     }
 }
+

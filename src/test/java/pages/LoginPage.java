@@ -34,19 +34,16 @@ public class LoginPage extends MethodsPage {
         LogUtil.info("The user clicked on 'LOGIN' Button");
     }
 
-    public void validateLogOutButton() {
+    public void validateSuccessfulLoginViaButton() {
         elementMethods.mouseHoverElement(contulMeu);
         elementMethods.waitForElementVisible(logOutButton);
         Assert.assertTrue(logOutButton.isDisplayed(), "Logout button is not displayed.");
-        LogUtil.info("Logout button is displayed.");
-    }
+        LogUtil.info("Login successful. The logout button is displayed.");
+        elementMethods.clickJSElement(logOutButton);
 
-    public void validateLoginButton(){
-        elementMethods.mouseHoverElement(contulMeu);
-        elementMethods.waitForElementVisible(clickLoginButton);
-        Assert.assertTrue(clickLoginButton.isDisplayed(), "Login button is not displayed.");
-        LogUtil.info("Login button is displayed.");
     }
 }
+
+
 
 
