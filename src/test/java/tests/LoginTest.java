@@ -20,6 +20,7 @@ public class LoginTest extends Environment {
         System.out.println("===== VALIDATE SUCCESSFUL LOGIN VIA URL ===== ");
         successfulLoginViaURL();
     }
+
     public void successfulLoginViaButton(){
         CookiesPage cookiesPage = new CookiesPage(getDriver());
         cookiesPage.acceptSiteCookies();

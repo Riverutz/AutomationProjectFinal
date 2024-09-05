@@ -23,8 +23,6 @@ public class LoginPage extends MethodsPage {
     @FindBy(xpath = "//a[@title='Logout']")
     private WebElement logOutButton;
 
-
-
     public void accountLogin(LoginPageObject testData) {
         elementMethods.mouseHoverElement(contulMeu);
         LogUtil.info("The user mouse hover on 'CONTUL MEU' ");
@@ -34,7 +32,6 @@ public class LoginPage extends MethodsPage {
         LogUtil.info("The user filled the 'PASSWORD' field with the value: " + testData.getUserPasswordValue());
         elementMethods.clickJSElement(clickLoginButton);
         LogUtil.info("The user clicked on 'LOGIN' Button");
-
     }
 
     public void validateSuccessfulLoginViaButton() {
