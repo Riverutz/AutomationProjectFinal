@@ -5,6 +5,7 @@ import objectData.LoginPageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class LoginPage extends MethodsPage {
     public LoginPage(WebDriver driver) {
@@ -30,6 +31,14 @@ public class LoginPage extends MethodsPage {
         LogUtil.info("The user filled the 'PASSWORD' field with the value: " + testData.getUserPasswordValue());
         elementMethods.clickJSElement(clickLoginButton);
         LogUtil.info("The user clicked on 'LOGIN' Button");
+    }
+
+    public void validateSuccessfulLoginViaButton() {
+        elementMethods.mouseHoverElement(contulMeu);
+        elementMethods.waitForElementVisible(logOutButton);
+        Assert.assertTrue(logOutButton.isDisplayed(), "Logout button is not displayed.");
+        LogUtil.info("Login successful. The logout button is displayed.");
+        elementMethods.clickJSElement(logOutButton);
     }
 }
 
