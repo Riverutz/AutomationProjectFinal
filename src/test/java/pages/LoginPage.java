@@ -33,7 +33,7 @@ public class LoginPage extends MethodsPage {
         elementMethods.clickJSElement(clickLoginButton);
         LogUtil.info("The user clicked on 'LOGIN' Button");
     }
-
+    ///
     public void validateSuccessfulLoginViaButton() {
         elementMethods.mouseHoverElement(contulMeu);
         elementMethods.waitForElementVisible(logOutButton);
