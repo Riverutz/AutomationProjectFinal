@@ -10,7 +10,7 @@ import pages.LoginPage;
 public class LoginTest extends Environment {
 
     @Test
-    public void validations() {
+    public void loginValidations() {
 
         System.out.println(" ");
         System.out.println("===== VALIDATE SUCCESSFUL LOGIN BY LOCATING THE PRESENCE OF LOGOUT BUTTON ===== ");
@@ -19,9 +19,6 @@ public class LoginTest extends Environment {
         System.out.println(" ");
         System.out.println("===== VALIDATE SUCCESSFUL LOGIN VIA URL ===== ");
         successfulLoginViaURL();
-
-
-
     }
     public void successfulLoginViaButton(){
         CookiesPage cookiesPage = new CookiesPage(getDriver());
@@ -41,7 +38,6 @@ public class LoginTest extends Environment {
             LoginPageObject loginTestData = new LoginPageObject("src/test/resources/testData/LoginPageData.json");
             LoginPage loginPage = new LoginPage(getDriver());
             loginPage.accountLogin(loginTestData);
-
 
             String currentUrl = getDriver().getCurrentUrl();
             if (currentUrl.equals("https://www.flax.ro/profil#action,login,success")) {

@@ -40,7 +40,6 @@ public class LoginPage extends MethodsPage {
         Assert.assertTrue(logOutButton.isDisplayed(), "Logout button is not displayed.");
         LogUtil.info("Login successful. The logout button is displayed.");
         elementMethods.clickJSElement(logOutButton);
-
     }
 }
 
