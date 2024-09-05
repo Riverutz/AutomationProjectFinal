@@ -20,6 +20,8 @@ public class LoginPage extends MethodsPage {
     private WebElement userPassword;
     @FindBy(xpath = "//a[normalize-space()='Login']")
     private WebElement clickLoginButton;
+    @FindBy(xpath = "//a[@title='Logout']")
+    private WebElement logOutButton;
 
 
 
@@ -32,6 +34,7 @@ public class LoginPage extends MethodsPage {
         LogUtil.info("The user filled the 'PASSWORD' field with the value: " + testData.getUserPasswordValue());
         elementMethods.clickJSElement(clickLoginButton);
         LogUtil.info("The user clicked on 'LOGIN' Button");
+
     }
 
     public void validateSuccessfulLoginViaButton() {
