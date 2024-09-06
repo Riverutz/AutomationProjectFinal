@@ -85,6 +85,5 @@ public class DeliveryPage extends MethodsPage {
     public void agreeWithTermsAndConditions(){
         elementMethods.clickJSElement(termensAndConditions);
         LogUtil.info("The user checked 'Am citit Termenii si conditiile si sunt de acord cu acestea'.");
-
     }
 }

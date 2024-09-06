@@ -19,7 +19,6 @@ public class ElementMethods {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(element));
-
     }
 
     public void clickElement(WebElement element) {
@@ -30,26 +29,22 @@ public class ElementMethods {
     public void fillElement(WebElement element, String text) {
         waitForElementVisible(element);
         element.sendKeys(text);
-
     }
 
     public void pressElement(WebElement element, Keys key) {
         waitForElementVisible(element);
         element.sendKeys(key);
-
     }
 
     public void clickJSElement(WebElement element) {
         JavascriptExecutor jsClick = (JavascriptExecutor) driver;
         jsClick.executeScript("arguments[0].click();", element);
-
     }
 
     public void selectByTextElement(WebElement element, String text) {
         waitForElementVisible(element);
         Select monthSelect = new Select(element);
         monthSelect.selectByVisibleText(text);
-
     }
 
     public void selectByValue(WebElement element, String text) {
@@ -62,7 +57,6 @@ public class ElementMethods {
         waitForElementVisible(element);
         element.clear();
         element.sendKeys(text);
-
     }
 
     public void mouseHoverElement(WebElement element){

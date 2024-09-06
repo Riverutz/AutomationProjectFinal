@@ -54,6 +54,4 @@ public class LoginTest extends Environment {
         loginPage.accountLogin(loginTestData);
         loginPage.validateSuccessfulLoginViaButton();
     }
-
-
 }
