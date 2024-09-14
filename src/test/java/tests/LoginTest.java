@@ -21,6 +21,16 @@ public class LoginTest extends Environment {
         successfulLoginViaURL();
     }
 
+    public void successfulLoginViaButton(){
+        CookiesPage cookiesPage = new CookiesPage(getDriver());
+        cookiesPage.acceptSiteCookies();
+
+        LoginPageObject loginTestData = new LoginPageObject("src/test/resources/testData/LoginPageData.json");
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.accountLogin(loginTestData);
+        loginPage.validateSuccessfulLoginViaButton();
+    }
+
     public void successfulLoginViaURL() {
         try {
             CookiesPage cookiesPage = new CookiesPage(getDriver());
@@ -43,15 +53,5 @@ public class LoginTest extends Environment {
         } finally {
             getDriver().quit();
         }
-    }
-
-    public void successfulLoginViaButton(){
-        CookiesPage cookiesPage = new CookiesPage(getDriver());
-        cookiesPage.acceptSiteCookies();
-
-        LoginPageObject loginTestData = new LoginPageObject("src/test/resources/testData/LoginPageData.json");
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.accountLogin(loginTestData);
-        loginPage.validateSuccessfulLoginViaButton();
     }
 }
