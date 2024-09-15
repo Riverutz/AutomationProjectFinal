@@ -1,4 +1,4 @@
-# AutomationProjectAugust
+# Automation Project for ITSCHOOL
 Test Automation for EcommerceSite Flax.ro
 ## Usage
 To use this project you will need:
