@@ -21,7 +21,7 @@ public class LoginTest extends Environment {
         successfulLoginViaURL();
     }
 
-    public void successfulLoginViaButton(){
+    public void successfulLoginViaButton() {
         CookiesPage cookiesPage = new CookiesPage(getDriver());
         cookiesPage.acceptSiteCookies();
 
@@ -44,7 +44,6 @@ public class LoginTest extends Environment {
             if (currentUrl.equals("https://www.flax.ro/profil#action,login,success")) {
                 LogUtil.info("Login successful. URL: " + currentUrl);
             } else {
-                System.out.println("Login failed. URL: " + currentUrl);
                 LogUtil.error("Login failed. URL: " + currentUrl);
             }
         } catch (Exception e) {
