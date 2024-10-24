@@ -21,12 +21,10 @@ public class ItemPage extends MethodsPage {
     private WebElement laptopSelectionByScreenSize;
     @FindBy(xpath = "//a[@title='Filtreaza dupa: Negru']")
     private WebElement laptopSelectionByColor;
-    @FindBy(xpath = "//div[@class='products-wrapper content-wrapper cf']//div[1]//div[1]//div[4]//a[1]")
+    @FindBy(xpath = "//div[contains(@class,'products-wrapper content-wrapper cf')]//div[1]//div[1]//div[2]//div[5]//a[1]")
     private WebElement addToCart;
-    @FindBy(xpath = "//a[@title='Cosul meu']")
-    private WebElement checkBasket;
-    @FindBy(xpath = "//a[@title='Vezi cos']")
-    private WebElement clickBasket;
+    @FindBy(xpath = "//a[normalize-space()='Detalii Comanda']")
+    private WebElement detaliiComanda;
 
     public void highestPriceSelection() {
         pageMethods.scrollPage(0, 350);
@@ -62,12 +60,8 @@ public class ItemPage extends MethodsPage {
         LogUtil.info("The user added the item to basket.");
     }
 
-    public void checkTheBasket() {
-        elementMethods.mouseHoverElement(checkBasket);
-    }
-
-    public void clickTheBasket() {
-        elementMethods.clickJSElement(clickBasket);
+    public void clickDetaliiComanda() {
+        elementMethods.clickJSElement(detaliiComanda);
         LogUtil.info("The user has clicked on the basket. ");
     }
 }

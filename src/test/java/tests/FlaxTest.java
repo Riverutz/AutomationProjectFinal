@@ -3,14 +3,13 @@ package tests;
 import pages.*;
 import environmentPreparation.Environment;
 import objectData.BillingPageObject;
-import objectData.DeliveryPageObject;
 import objectData.LoginPageObject;
 import org.testng.annotations.Test;
 
 public class FlaxTest extends Environment {
 
     @Test
-    public void siteTest(){
+    public void siteTest() {
 
         CookiesPage cookiesPage = new CookiesPage(getDriver());
         cookiesPage.acceptSiteCookies();
@@ -30,23 +29,12 @@ public class FlaxTest extends Environment {
         itemPage.laptopScreenSizeSelection();
         itemPage.laptopColorSelection();
         itemPage.addItemToCart();
-        itemPage.checkTheBasket();
-        itemPage.clickTheBasket();
+        itemPage.clickDetaliiComanda();
 
         BillingPageObject billingTestData = new BillingPageObject("src/test/resources/testData/BillingPageData.json");
         BillingPage billingPage = new BillingPage(getDriver());
-        billingPage.addBillingDetails();
-        billingPage.addBillingAddress(billingTestData);
-        billingPage.billingSalveazaButton();
-
-        DeliveryPageObject deliveryTestData = new DeliveryPageObject("src/test/resources/testData/DeliveryPageObject.json");
-        DeliveryPage deliveryPage = new DeliveryPage(getDriver());
-        deliveryPage.addDeliveryDetails();
-        deliveryPage.addDeliveryAddress(deliveryTestData);
-        deliveryPage.deliverySalveazaButton();
-        deliveryPage.fanCourier();
-        deliveryPage.paymentMethods();
-        deliveryPage.tinyObservations(deliveryTestData);
-        deliveryPage.agreeWithTermsAndConditions();
+        billingPage.billingPersonAddress(billingTestData);
+        billingPage.shippingMethods();
+        billingPage.paymentMethods();
     }
 }

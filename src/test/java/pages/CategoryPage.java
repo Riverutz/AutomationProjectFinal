@@ -10,7 +10,7 @@ public class CategoryPage extends MethodsPage {
         super(driver);
     }
 
-    @FindBy(xpath = "//a[contains(text(),'Laptop/Tableta')]")
+    @FindBy(xpath = "//span[normalize-space()='Laptop/Tableta']")
     private WebElement laptopTabletaMenu;
     @FindBy(xpath = "//strong[normalize-space()='Laptop']")
     private WebElement laptopSubMenu;
@@ -21,7 +21,7 @@ public class CategoryPage extends MethodsPage {
     }
 
     public void laptopSubMenuSelection() {
-        elementMethods.clickElement(laptopSubMenu);
+        elementMethods.clickJSElement(laptopSubMenu);
         LogUtil.info("The user has selected the 'Laptop' submenu. ");
     }
 }

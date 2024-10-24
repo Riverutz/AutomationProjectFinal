@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 @AllArgsConstructor
@@ -59,15 +60,27 @@ public class ElementMethods {
         element.sendKeys(text);
     }
 
-    public void mouseHoverElement(WebElement element){
+    public void mouseHoverElement(WebElement element) {
         waitForElementVisible(element);
         Actions act = new Actions(driver); //add waitForElementVisible(element); in case of fail
         act.moveToElement(element).perform();
     }
 
-    public void dropDownElement(WebElement element, Integer index){
+    public void dropDownElement(WebElement element, Integer index) {
         waitForElementVisible(element);
         Select dropdown = new Select(element);
         dropdown.selectByIndex(index);
+    }
+
+    public void selectByText(WebElement element, String text) {
+        waitForElementVisible(element);
+        Select countySelect = new Select(element);
+        countySelect.selectByVisibleText(text);
+    }
+
+    public void dropdownElementString(WebElement element, String text){
+        waitForElementVisible(element);
+        Select select = new Select(element);
+        select.selectByVisibleText(text);
     }
 }

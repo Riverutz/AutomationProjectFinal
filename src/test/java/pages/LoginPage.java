@@ -11,12 +11,15 @@ public class LoginPage extends MethodsPage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(xpath = "//a[@title='Contul meu']")
+    ////span[normalize-space()='Contul meu']
+    ////a[@title='Contul meu']
+    @FindBy(xpath = "//span[normalize-space()='Contul meu']")
     private WebElement contulMeu;
-    @FindBy(id = "login-email-header")
+    @FindBy(xpath = "//a[@title='Intra in cont']")
+    private WebElement intraInCont;
+    @FindBy(id = "login-email")
     private WebElement userEmail;
-    @FindBy(id = "login-password-header")
+    @FindBy(id = "login-password")
     private WebElement userPassword;
     @FindBy(xpath = "//a[normalize-space()='Login']")
     private WebElement clickLoginButton;
@@ -26,6 +29,8 @@ public class LoginPage extends MethodsPage {
     public void accountLogin(LoginPageObject testData) {
         elementMethods.mouseHoverElement(contulMeu);
         LogUtil.info("The user mouse hover on 'CONTUL MEU' ");
+        elementMethods.clickJSElement(intraInCont);
+        LogUtil.info("The user clicked on 'INTRA IN CONT' ");
         elementMethods.fillElement(userEmail, testData.getUserEmailValue());
         LogUtil.info("The user filled the 'EMAIL' field with the value: " + testData.getUserEmailValue());
         elementMethods.fillElement(userPassword, testData.getUserPasswordValue());
